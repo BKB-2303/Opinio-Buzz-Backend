@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const { uploadProduct} = require('../controllers/businessproducts.controller');
+const { uploadProduct } = require('../controllers/businessproducts.controller');
 
 // Set up Multer for file uploads
 const storage = multer.diskStorage({
@@ -16,5 +16,5 @@ const upload = multer({ storage });
 
 // Define routes
 router.post('/upload', upload.single('productImage'), uploadProduct);
-// router.get('/products',controller.getBusinessProducts);
+// router.get('/products', controller.getBusinessProducts);
 module.exports = router;
