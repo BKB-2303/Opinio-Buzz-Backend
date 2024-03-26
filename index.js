@@ -136,7 +136,7 @@ app.put('/admin/product/:id', async (req, res) => {
     }
   });
   
-  // Add this route to fetch all reviews for a given product
+
   app.get('/admin/product/:id/reviews', async (req, res) => {
     const { id } = req.params;
   
